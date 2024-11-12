@@ -1,8 +1,160 @@
-<html>
-    <head>
-<title>Proyecto ZERO</title>
-    </head>
-    <body>
-        <h1>Pobreza ZERO</h1>
-    </body>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Erradicar la Pobreza | ODS 1</title>
+  
+  <!-- Cargando Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Estilos Personalizados -->
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f1f1f1;
+      color: #333;
+      padding: 0;
+      margin: 0;
+    }
+    
+    .hero {
+      background: url('https://source.unsplash.com/1600x900/?poverty') no-repeat center center;
+      background-size: cover;
+      height: 100vh;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      flex-direction: column;
+    }
+
+    .btn-donate {
+      background-color: #007bff;
+      color: white;
+      font-size: 1.2rem;
+      padding: 15px 25px;
+      border-radius: 30px;
+      transition: all 0.3s ease;
+    }
+
+    .btn-donate:hover {
+      background-color: #0056b3;
+      transform: scale(1.1);
+    }
+
+    .section {
+      padding: 50px 0;
+    }
+
+    .card {
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .card img {
+      border-radius: 10px;
+    }
+
+    .container {
+      padding: 30px;
+    }
+
+    .modal-content {
+      background-color: #f1f1f1;
+    }
+
+    .header {
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+  </style>
+
+</head>
+<body>
+
+<!-- Hero Section -->
+<div class="hero">
+  <h1>¡Ayúdanos a Erradicar la Pobreza!</h1>
+  <p>Con tu ayuda podemos marcar la diferencia. Dona ahora.</p>
+  <a href="#donationSection" class="btn-donate btn-lg">Haz tu Donación</a>
+</div>
+
+<!-- Sección de Información -->
+<div id="donationSection" class="section text-center bg-light">
+  <div class="container">
+    <h2 class="header">¿Por qué ayudar?</h2>
+    <p>La pobreza afecta a millones de personas en todo el mundo. Con tu donación, podemos apoyar programas educativos, salud, y acceso a recursos esenciales.</p>
+    
+    <!-- Card con más info -->
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://source.unsplash.com/500x300/?homeless" class="card-img-top" alt="Pobreza">
+          <div class="card-body">
+            <h5 class="card-title">Combatir la Pobreza Extrema</h5>
+            <p class="card-text">Apoyamos a aquellos que viven con menos de 1,25 USD al día.</p>
+            <button class="btn btn-primary" onclick="window.open('https://example-donation.com/poverty')">Donar Ahora</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://source.unsplash.com/500x300/?education" class="card-img-top" alt="Educación">
+          <div class="card-body">
+            <h5 class="card-title">Acceso a la Educación</h5>
+            <p class="card-text">Tu ayuda asegura que niños y niñas puedan recibir educación.</p>
+            <button class="btn btn-primary" onclick="window.open('https://example-donation.com/education')">Donar Ahora</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://source.unsplash.com/500x300/?health" class="card-img-top" alt="Salud">
+          <div class="card-body">
+            <h5 class="card-title">Acceso a la Salud</h5>
+            <p class="card-text">Con tu donación, más personas tendrán acceso a servicios médicos.</p>
+            <button class="btn btn-primary" onclick="window.open('https://example-donation.com/health')">Donar Ahora</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal de Agradecimiento -->
+<div class="modal fade" id="thanksModal" tabindex="-1" role="dialog" aria-labelledby="thanksModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="thanksModalLabel">¡Gracias por tu Donación!</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Gracias por ser parte del cambio. Tu apoyo hace una gran diferencia.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Cargando Bootstrap y Scripts -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+  // Script para abrir el modal de agradecimiento al hacer una donación
+  function openThanksModal() {
+    $('#thanksModal').modal('show');
+  }
+</script>
+
+</body>
 </html>
